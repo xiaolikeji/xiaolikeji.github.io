@@ -1,9 +1,222 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh_cn">
+
 <head>
-  <title>小李科技</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小李科技</title>
+    <style type="text/css">
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #f6f6f6;
+        }
+
+        a:link,
+        a:hover,
+        a:active,
+        a:visited {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-image: url(bg.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .box {
+            width: 400px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            /* margin-bottom: 200px; */
+        }
+
+        .title {
+            height: 80px;
+            line-height: 80px;
+            font-size: 36px;
+            font-weight: bolder;
+            text-align: center;
+            color:#fff;
+        }
+
+        .line-item {
+            margin: 10px 0;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+            border: solid 1px rgba(255,255,255,0.4);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .link-back {
+            height: 40px;
+        }
+
+        .link-bk {
+            width: 0%;
+            height: 40px;
+            border-radius: 20px;
+            background-color: rgba(255,255,255,0.5);
+            transition: width 0.3s, background-color 0.3s;
+        }
+
+        .line-item:hover .link-bk {
+            width: 100%;
+        }
+
+        .link-top {
+            height: 40px;
+            margin-top: -40px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .link-label {
+            padding-left: 13px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+            flex-grow: 1;
+            color: #fff;
+            transition: color 0.3s;
+            text-align: center;
+        }
+
+        .line-item:hover .link-label {
+            color: #000;
+        }
+
+        .link-right {
+            width: 12px;
+            height: 12px;
+            border-top: solid 1px #000;
+            border-right: solid 1px #000;
+            transform: rotate(45deg);
+            border-color: #fff;
+            transition: border-color 0.3s;
+        }
+
+        .line-item:hover .link-right {
+            border-color: #000;
+        }
+
+        .wechat-box {
+            height: 40px;
+            margin: 10px 0;
+            padding: 0 20px;
+            border: solid 1px rgba(255,255,255,0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+        .wechat-txt {
+            align-self: stretch;
+            flex-shrink: 0;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+            user-select: none;
+            cursor: pointer;
+            text-align: center;
+            color: #fff;
+        }
+
+        .wechat-qrcode {
+            width: 240px;
+            margin-top: 20px;
+            opacity: 0;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border: solid 1px #f0f0f0;
+            border-radius: 10px;
+            user-select: none;
+            pointer-events: none;
+            transition: margin-top 0.3s, opacity 0.3s;
+            z-index: 9;
+            filter: invert(100%);
+        }
+
+        .wechat-box:hover .wechat-qrcode,
+        .wechat-box:active .wechat-qrcode {
+            margin-top: 2px;
+            opacity: 1;
+        }
+        @keyframes blink {
+            0%{ color: rgba(255,255,255,0); }
+            50%{ color: rgba(255,255,255,1); }
+            100%{ color: rgba(255,255,255,0); }
+        }
+        .notice{
+            /* font-weight: bolder; */
+            /* color: #fff; */
+            padding-top: 10px;
+            text-align: center;
+            animation-name: blink;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+        }
+    </style>
 </head>
+
 <body>
-  <h1>欢迎</h1>
+    <div class="container">
+        <div class="box">
+            <div class="title">小李科技</div>
+            <a href="https://wwv.5765.cn/links/50B26E20" class="line-item">
+                <div class="link-back">
+                    <div class="link-bk"></div>
+                </div>
+                <div class="link-top">
+                    <div class="link-label">高端内部稳定程序</div>
+                    <div class="link-right"></div>
+                </div>
+            </a>
+            <a href="https://wwv.shuziu.com/links/2953C28E" class="line-item">
+                <div class="link-back">
+                    <div class="link-bk"></div>
+                </div>
+                <div class="link-top">
+                    <div class="link-label">极品排位数据租号</div>
+                    <div class="link-right"></div>
+                </div>
+            </a>
+            <div class="wechat-box">
+                <div class="wechat-txt">客服微信：Top1MVP99</div>
+                <img class="wechat-qrcode" src="qrcode.jpg" />
+            </div>
+            <div class="notice">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;只干稳定 认准小李 主打服务 在线秒回！！！
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
